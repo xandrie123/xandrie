@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package project_kurt;
+
+/**
+ *
+ * @author Student
+ */
+public class Project_kurt {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      int Koluts=1000;
+      int Crush=100;
+      double kurt =100000;
+      float number=100000f;
+      char james= 'A';
+      double kulotskie=10;
+      
+      String Name= "this is a String data type";
+      boolean status=true;
+   
+      System.out.println(Koluts);
+      System.out.println(Crush);
+      System.out.println(kurt);
+      System.out.println(number);
+      System.out.println(james);
+      System.out.println(Crush+kurt);
+      System.out.println(Koluts+99);
+      System.out.println(Koluts*kulotskie);
+      
+      
+      System.out.println(Crush%kurt);
+      
+    }
+    
+}
