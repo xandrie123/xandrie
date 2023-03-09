@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package arances1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class Arances1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+              int a;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter number(max) to print all even and odd until: ");
+      int number = sc.nextInt();
+      System.out.println("Even numbers from 1 to " + number + " are: \n");
+      for(a = 1; a <= number; a++)
+      {
+         if(a % 2 == 0)
+         {
+            System.out.print(a + "\n");
+         }
+      }
+      System.out.println("Odd numbers from 1 to " + number + " are: \n");
+      for(a = 1; a <= number; a++)
+      {
+         if(a % 2 == 1)
+         {
+            System.out.print(a + "\n");
+         }
+      }
+      sc.close();
+   }
+}
+
+}
+    
+    
+
