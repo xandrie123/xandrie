@@ -1,0 +1,192 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package store;
+
+/**
+ *
+ * @author Student
+ */
+import java.util.Scanner;
+
+public class Orderingsystem {
+    
+    public static Scanner input = new Scanner(System.in);
+    public static String again;
+    public static int choose,quantity=1;
+    public static double total=0,pay;
+    public static void menu(){
+    System.out.println("\t\t\t\t+===================================+");
+    System.out.println("\t\t\t\t           IMNANAN MENU          ");
+    System.out.println("\t\t\t\t   1. Tanduay      Light       Php. 145.00");
+    System.out.println("\t\t\t\t   2. Fundador     Light         Php. 540.00");
+    System.out.println("\t\t\t\t   3. Alfonso Light            Php. 435.00");
+     System.out.println("\t\t\t\t   4. GSM BLUE            Php. 135.00");
+      System.out.println("\t\t\t\t   5. PULUTAN WITH SABAW          Php. 75.00");
+    System.out.println("\t\t\t\t   6. CANCEL                         ");
+    System.out.println("\t\t\t\t+====================================+");
+    }
+    
+    public static void order(){
+    System.out.println("Press 1 to Tanduay Light , Press 2 to Fundador Light , Press 3 to Alfonso Light, Press 4 GSM BLUE, Press 5 PULUTAN WITH SABAW  and Press 6 to Cancel");
+    System.out.print("Press you want to buy? :");
+    choose = input.nextInt();
+        //conditions
+        switch (choose) {
+            case 1:
+                System.out.println("You choose Tanduay Light");
+                System.out.print("How many Tanduay Light you want to Buy? :");
+                quantity =input.nextInt();
+                total = total +(quantity*145);
+                System.out.println("You want to buy again? ");
+                System.out.println("Press Y for Yes and N for N : ");
+                again = input.next();
+                if(again.equalsIgnoreCase("Y")){
+                    order();//call the method you to create
+                    }else{
+                    
+                    while(pay<=total) {
+                    System.out.println("Total price is " + total );
+                    System.out.println("ENTER A PAYMENT");           
+            pay = input.nextDouble();
+             if(pay <=total){
+                        System.out.println("Not enough payment");
+        
+                          
+                  }else {
+                       total = pay-total;
+                        System.out.println("Total Change is " + total);  
+                        
+                         
+                          
+                         
+                    }
+                    }
+                }       break;
+            case 2:
+                System.out.println("You choose Fundador Light");
+                System.out.print("How many Fundador Light you want to Buy? :");
+                quantity =input.nextInt();
+                total = total +(quantity*540);
+                System.out.println("You want to buy again? ");
+                System.out.println("Press Y for Yes and N for N : ");
+                again = input.next();
+                if(again.equalsIgnoreCase("Y")){
+                    order();//call the method you to create
+                 }else{
+                     while(pay<=total) {
+                    System.out.println("Total price is " + total );
+                    System.out.println("ENTER A PAYMENT");           
+                   pay = input.nextDouble();
+                     if(pay <=total){
+                        System.out.println("Not enough payment");
+        
+        
+                          
+                  } else{
+                     
+                       total = pay-total;
+                        System.out.println("Total Change is " + total);  
+                     }
+                    }
+                }       break;
+            case 3:
+                System.out.println("You choose Alfonso Light");
+                System.out.print("How many Alfonso lIght you want to Buy? :");
+                quantity =input.nextInt();
+                total = total +(quantity*435);
+                        
+                System.out.println("You want to buy again? ");
+                System.out.println("Press Y for Yes and N for NO : ");
+                again = input.next();
+                if(again.equalsIgnoreCase("Y")){
+                    order();//call the method you to create
+                }else{
+                   while(pay<=total) {
+                    System.out.println("Total price is " + total );
+                    System.out.println("ENTER A PAYMENT");           
+            pay = input.nextDouble();
+              if(pay <=total){
+                        System.out.println("Not enough payment");
+        
+                          
+                  }else {
+                       total = pay-total;
+                        System.out.println("Total Change is " + total);  
+              }
+                    }
+                }       break;
+                 case 4:
+                System.out.println("You choose GSM BLUE");
+                System.out.print("How many GSM BLUE you want to Buy? :");
+                quantity =input.nextInt();
+                total = total +(quantity*135);
+                        
+                System.out.println("You want to buy again? ");
+                System.out.println("Press Y for Yes and N for NO : ");
+                again = input.next();
+                if(again.equalsIgnoreCase("Y")){
+                    order();//call the method you to create
+                 }else{
+                       while(pay<=total) {
+                    System.out.println("Total price is " + total );
+                    System.out.println("ENTER A PAYMENT");           
+            pay = input.nextDouble();
+          if(pay <=total){
+                        System.out.println("Not enough payment");
+                          
+                  } else{
+                       total = pay-total;
+                        System.out.println("Total Change is " + total);  
+          }
+                    }
+                }       break;
+                 case 5:
+                System.out.println("You choose PULUTAN WITH SABAW");
+                System.out.print("How many PULUTAN WITH SABAW you want to Buy? :");
+                quantity =input.nextInt();
+                total = total +(quantity*75);
+                        
+                System.out.println("You want to buy again? ");
+                System.out.println("Press Y for Yes and N for NO : ");
+                again = input.next();
+                if(again.equalsIgnoreCase("Y")){
+                    order();//call the method you to create
+          }else{
+                    while(pay<=total) {
+                    System.out.println("Total price is " + total );
+                    System.out.println("ENTER A PAYMENT");           
+            pay = input.nextDouble();
+              if(pay <=total){
+                        System.out.println("Not enough payment");
+        
+                          
+                  } else{
+                       total = pay-total;
+                        System.out.println("Total Change is " + total);  
+              }
+                        
+                    }
+                }       break;
+            case 6:
+                System.exit(0);//close program
+            default:
+                System.out.println("Choose 1 to 6 only!");
+                order();
+                break;
+        }
+    }
+    public static void main(String[] args) {
+       menu();
+       order();
+  
+}
+
+    }
+    
+    
+
+    
+
