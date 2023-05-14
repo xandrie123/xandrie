@@ -16,58 +16,54 @@ public class Main {
       System.out.println("3. Exit");
       int choice = scanner.nextInt();
       switch (choice) {
-        case 1:
-          System.out.println("Choose a shape:");
-          System.out.println("1. Sphere");
-          System.out.println("2. Cube");
-          System.out.println("3. Cylinder");
-          System.out.println("4. Cone");
-          int shapeChoice = scanner.nextInt();
-          switch (shapeChoice) {
-            case 1:
-              System.out.println("Enter the radius of the sphere:");
-              double sphereRadius = scanner.nextDouble();
-              shape = new Sphere(sphereRadius);
-              break;
-            case 2:
-              System.out.println("Enter the side length of the cube:");
-              double cubeSideLength = scanner.nextDouble();
-              shape = new Cube(cubeSideLength);
-              break;
-            case 3:
-              System.out.println("Enter the radius of the cylinder:");
-              double cylinderRadius = scanner.nextDouble();
-              System.out.println("Enter the height of the cylinder:");
-              double cylinderHeight = scanner.nextDouble();
-              shape = new Cylinder(cylinderRadius, cylinderHeight);
-              break;
-            case 4:
-              System.out.println("Enter the radius of the cone:");
-              double coneRadius = scanner.nextDouble();
-              System.out.println("Enter the height of the cone:");
-              double coneHeight = scanner.nextDouble();
-              shape = new Cone(coneRadius, coneHeight);
-              break;
-            default:
-              System.out.println("Invalid choice");
-              break;
-          }
-          break;
-        case 2:
-          if (shape == null) {
-            System.out.println("No shape created yet");
-            break;
-          }
-          System.out.println("The volume of the shape is: " + shape.getVolume()+"cubic units");
-          System.out.println("The surface area of the shape is: " + shape.getSurfaceArea()+"square units");
-          break;
-        case 3:
-          System.out.println("Exiting program");
-          scanner.close();
-          return;
-        default:
-          System.out.println("Invalid choice");
-          break;
+        case 1 -> {
+            System.out.println("Choose a shape:");
+            System.out.println("1. Sphere");
+            System.out.println("2. Cube");
+            System.out.println("3. Cylinder");
+            System.out.println("4. Cone");
+            int shapeChoice = scanner.nextInt();
+            switch (shapeChoice) {
+                case 1 -> {
+                    System.out.println("Enter the radius of the sphere:");
+                    double sphereRadius = scanner.nextDouble();
+                    shape = new Sphere(sphereRadius);
+              }
+                case 2 -> {
+                    System.out.println("Enter the side length of the cube:");
+                    double cubeSideLength = scanner.nextDouble();
+                    shape = new Cube(cubeSideLength);
+              }
+                case 3 -> {
+                    System.out.println("Enter the radius of the cylinder:");
+                    double cylinderRadius = scanner.nextDouble();
+                    System.out.println("Enter the height of the cylinder:");
+                    double cylinderHeight = scanner.nextDouble();
+                    shape = new Cylinder(cylinderRadius, cylinderHeight);
+              }
+                case 4 -> {
+                    System.out.println("Enter the radius of the cone:");
+                    double coneRadius = scanner.nextDouble();
+                    System.out.println("Enter the height of the cone:");
+                    double coneHeight = scanner.nextDouble();
+                    shape = new Cone(coneRadius, coneHeight);
+              }
+                default -> System.out.println("Invalid choice");
+            } }
+        case 2 -> {
+            if (shape == null) {
+                System.out.println("No shape created yet");
+                break;
+            }
+            System.out.println("The volume of the shape is: " + shape.getVolume()+"Cubic Units ");
+            System.out.println("The surface area of the shape is: " + shape.getSurfaceArea()+"Cubic Units");
+            }
+        case 3 -> {
+            System.out.println("Exiting program");
+            scanner.close();
+            return;
+            }
+        default -> System.out.println("Invalid choice");
       }
     }
   }
@@ -149,4 +145,5 @@ class Cylinder extends Shape {
         double slantHeight = Math.sqrt(Math.pow(radius,2) + Math.pow(height,2));
         return Math.PI * radius * slantHeight + Math.PI * Math.pow( radius,2);
     }
-}
+
+ }}
